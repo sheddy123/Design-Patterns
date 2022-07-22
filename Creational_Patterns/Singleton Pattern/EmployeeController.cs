@@ -1,4 +1,4 @@
-﻿using Creational_Patterns.Singleton_Pattern.Models;
+﻿using Creational_Patterns.Models;
 using Logger;
 using System;
 using System.Collections.Generic;

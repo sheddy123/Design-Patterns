@@ -1,6 +1,8 @@
 ﻿using Creational_Patterns.Singleton_Pattern;
-using Creational_Patterns.Singleton_Pattern.Models;
+using Creational_Patterns.Models;
 using System;
+using Creational_Patterns.Factory_Pattern;
+using Creational_Patterns.Managers;
 
 namespace Design_Patterns
 {
@@ -8,16 +10,17 @@ namespace Design_Patterns
     {
         static void Main(string[] args)
         {
-            EmployeeController employeeController = new EmployeeController();
-            Employee addEmployee = new Employee()
-            {
-                Id = 1,
-                JobDescription = "Job 2",
-                Department = "Dept 1",
-                Number = "23"
-            };
-            employeeController.AddEmployee(addEmployee);
+            EmployeeManagerFactory empFactory = new EmployeeManagerFactory();
+            IEmployeeManager empManager = empFactory.GetEmployeeManager(1);
+            empManager.GetBonus();
+            empManager.GetPay();
+
+            empManager = empFactory.GetEmployeeManager(2);
+            empManager.GetBonus();
+            empManager.GetPay();
+
             Console.WriteLine("Hello World!");
+            Console.ReadLine();
         }
     }
 }
