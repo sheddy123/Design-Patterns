@@ -33,7 +33,7 @@ namespace Creational_Patterns.Factory_Pattern
     /*
      * BUSINESS REQUIREMENT (Example)
      * Differentiate employees as permanent and contract and segregate their pay scales as well as bonus
-     * based on their employees types
+     * based on their employees types (Achieved using simple factory)
      */
 
     //Simple Factory Pattern
