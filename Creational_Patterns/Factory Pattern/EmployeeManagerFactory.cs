@@ -16,6 +16,8 @@ namespace Creational_Patterns.Factory_Pattern
      * 
      * Factory pattern is one of the most used design patterns in real world applications
      * 
+     *  Simple/Factory Pattern
+     *
      * |Client| --uses-- -------> |Factory| --creates-- --------> |Product|
      */
 
