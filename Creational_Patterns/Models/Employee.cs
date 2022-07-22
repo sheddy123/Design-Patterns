@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 
-namespace Creational_Patterns.Singleton_Pattern.Models
+namespace Creational_Patterns.Models
 {
-   public class Employee
+    public class Employee
     {
         public int Id { get; set; }
         [Required]
@@ -14,4 +14,5 @@ namespace Creational_Patterns.Singleton_Pattern.Models
         public string Number { get; set; }
         public string Department { get; set; }
     }
+    
 }

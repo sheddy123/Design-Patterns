@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Creational_Patterns.Managers;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -32,7 +33,28 @@ namespace Creational_Patterns.Factory_Pattern
      * Differentiate employees as permanent and contract and segregate their pay scales as well as bonus
      * based on their employees types
      */
-    class Class1
+
+    //Simple Factory Pattern
+    /*
+     * - SImple factory abstracts the creation details of the product
+     * - Simple factory refers to the newly created object through an interface
+     * - Any type creation is handed with a change of code in the factory class and not at the client code
+     */
+    public class EmployeeManagerFactory
     {
+        public IEmployeeManager GetEmployeeManager(int employeeId)
+        {
+            IEmployeeManager returnValue = null;
+            switch (employeeId)
+            {
+                case 1:
+                    Console.WriteLine("Getting Permanent Employee Manager");
+                    returnValue = new PermannentEmployeeManager(); break;
+                case 2:
+                    Console.WriteLine("Getting Contract Employee Manager");
+                    returnValue = new ContractEmployeeManager(); break;
+            }
+            return returnValue;
+        }
     }
 }
