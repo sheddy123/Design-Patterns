@@ -18,6 +18,8 @@ namespace Creational_Patterns.Models
         public Employee_Type EmployeeTypeId { get; set; }
         public decimal HouseAllowance { get; set; }
         public decimal MedicalAllowance { get; set; }
+        public string ComputerDetails { get; set; }
+
     }
     
 }
