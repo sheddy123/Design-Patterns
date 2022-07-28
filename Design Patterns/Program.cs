@@ -4,6 +4,7 @@ using System;
 using Creational_Patterns.Factory_Pattern.FactoryMethod;
 using Creational_Patterns.Managers;
 using static Creational_Patterns.Models.Employee_Type;
+using Creational_Patterns.SimpleFactory;
 
 namespace Design_Patterns
 {
@@ -11,6 +12,12 @@ namespace Design_Patterns
     {
         static void Main(string[] args)
         {
+
+            //Implementing Single Fatory method
+            SimplePizzaFactory factory = new SimplePizzaFactory();
+            PizzaStore pizzaStore = new PizzaStore(factory);
+            var pepperoni = pizzaStore.orderPizza("cheese");
+
             Employee employee = new Employee()
             {
                 Id = 1,
